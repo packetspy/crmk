@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D01EB0A0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "crm.Domain.Test", "tests\crm.Domain.Test\crm.Domain.Test.csproj", "{F08A3200-362A-483F-B841-10CF2B233DE2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "crm.Infra", "src\crm.Infra\crm.Infra.csproj", "{38755697-D6CF-43C5-B640-90C648E91AFE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{F08A3200-362A-483F-B841-10CF2B233DE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F08A3200-362A-483F-B841-10CF2B233DE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F08A3200-362A-483F-B841-10CF2B233DE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38755697-D6CF-43C5-B640-90C648E91AFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38755697-D6CF-43C5-B640-90C648E91AFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38755697-D6CF-43C5-B640-90C648E91AFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38755697-D6CF-43C5-B640-90C648E91AFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,5 +48,6 @@ Global
 		{8DB09079-299F-4378-B54C-976C0C59C3A0} = {A842E779-17B3-4932-9CC8-87242AAF8003}
 		{EEBAD1E6-C8F9-4152-9D5D-80126EF830DA} = {A842E779-17B3-4932-9CC8-87242AAF8003}
 		{F08A3200-362A-483F-B841-10CF2B233DE2} = {D01EB0A0-72F8-4C9A-9885-7414E5E88208}
+		{38755697-D6CF-43C5-B640-90C648E91AFE} = {A842E779-17B3-4932-9CC8-87242AAF8003}
 	EndGlobalSection
 EndGlobal
