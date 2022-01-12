@@ -1,17 +1,31 @@
-﻿using crm.Domain.Interface;
-using crm.Domain.Service;
+﻿using crm.Infra.Context;
+using crm.Infra.Extensions;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+{
+    var services = builder.Services;
+    var configuration = builder.Configuration;
 
-builder.Services.AddCors();
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+    services.AddCors();
+    services.AddCors();
+    services.AddControllers();
+    // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+    services.AddEndpointsApiExplorer();
+    services.AddSwaggerGen();
 
-builder.Services.AddScoped<IUserService, UserService>();
+
+    //Connect Database
+    services.AddDbContext<CrmContext>(options =>
+    {
+        options.UseMySql(configuration.GetConnectionString("CrmConnection"), ServerVersion.Parse("8.0.26"));
+    });
+
+
+    // Add services to the container.
+    ApiDepencyInjection.Boot(services);
+}
 
 var app = builder.Build();
 
